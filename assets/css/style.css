@@ -1,0 +1,28 @@
+.everywhere {
+    height: 100%;
+    background: rgb(100, 16, 16);
+}
+
+h1 {
+    text-align: center;
+}
+
+.header {
+    margin: 0, auto;
+}
+
+.text {
+    color: #FFFFFF;
+}
+
+.questionsArea {
+    margin: 0, auto;
+    height: 750px;
+    background-image: url("../images/ringInHand.jpg"); 
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+}
+
+#whiteText {
+    color: #FFFFFF;
+}
