@@ -16,6 +16,7 @@ h1 {
 }
 
 .questionsArea {
+    position: relative;
     margin: 0, auto;
     height: 750px;
     background-image: url("../images/ringInHand.jpg"); 
@@ -25,4 +26,12 @@ h1 {
 
 #whiteText {
     color: #FFFFFF;
+}
+
+#startButton {
+    position: absolute;
+    top: 40%;
+    width: 30%;
+    margin-right: 35%;
+    margin-left: 35%;
 }
