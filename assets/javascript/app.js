@@ -1,12 +1,62 @@
-// Make a function called startQuiz
-function startQuiz() {
-    $("#questionsArea").onclick("#startButton")
-        document.write("blah");
-        
-    }
+// Make a function called startQuiz that gets called when the #startButton is clicked
+
+var que1 = {"question": "Question #1 - How many members of the Istari are there?",
+            "answer": 2,
+            "options": ["a) 7","b) 4", "c) 5", "d) 16"]}
+            
+var que2 = {"question": "what is ",
+            "answer": 1,
+            "options": ["answer","answer2", "answer3", "answer4"]}
+
+var que3 = {"question": "what is ",
+            "answer": 1,
+            "options": ["answer","answer2", "answer3", "answer4"]}
+
+var que4 = {"question": "what is ",
+            "answer": 1,
+            "options": ["answer","answer2", "answer3", "answer4"]}
+            
+var que5 = {"question": "what is ",
+            "answer": 1,
+            "options": ["answer","answer2", "answer3", "answer4"]}
+
+var que6 = {"question": "what is ",
+            "answer": 1,
+            "options": ["answer","answer2", "answer3", "answer4"]}
+
+var que7 = {"question": "what is ",
+            "answer": 1,
+            "options": ["answer","answer2", "answer3", "answer4"]}
+
+var que8 = {"question": "what is ",
+            "answer": 1,
+            "options": ["answer","answer2", "answer3", "answer4"]}
+            
+var que9 = {"question": "what is ",
+            "answer": 1,
+            "options": ["answer","answer2", "answer3", "answer4"]}
+
+var que10 = {"question": "what is ",
+            "answer": 1,
+            "options": ["answer","answer2", "answer3", "answer4"]}            
 
 
-// Make function startQuiz get activited from the click of the #startButton button
+var arrQue = [que1,que2,que3,que4,que5,que6,que7,que8,que9,que10]
+
+
+for (var i = 0; i < arrQue.length; i++) {
+  $("#questionsArea").append(i);
+}
+
+
+
+//$("#startButton").click(function(){
+    //.html("The paragraph was clicked.");
+//});
+
+
+
+
 
 // Within startQuiz function have it grab the "#questionsArea" and overwrite what is there currently (the #startButton)
 
