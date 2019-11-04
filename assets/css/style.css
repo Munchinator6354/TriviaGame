@@ -35,3 +35,9 @@ h1 {
     margin-right: 35%;
     margin-left: 35%;
 }
+
+#timerArea {
+    text-align: center;
+    color: white;
+
+}

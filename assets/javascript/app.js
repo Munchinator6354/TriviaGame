@@ -44,7 +44,7 @@
 // for (var i = 0; i < arrQue.length; i++) {
 //   $("#questionsArea").append(i);
 // }
-
+var timer;
 
 var questions = [
 
@@ -62,8 +62,8 @@ var questions = [
 
     {
         question: 'what is your age',
-        choices: [20, 30, 40],
-        correct: 30
+        choices: ["20", "30", "40"],
+        correct: "30"
     },
 
     {
@@ -81,14 +81,47 @@ var game = {
     correct: 0,
     incorrect: 0,
     counter: 10,
+    countdown: function () {
+        game.counter--
+        $("#timerNumber").html(game.counter)
+        if (game.counter === 0) {
+            game.done();
+        }
+    },
     start: function () {
+
+        timer = setInterval(game.countdown, 1000);
+        $("#timerArea").append("<h2>Time Remaining: <span id='timerNumber'>30</span></h2>");
+        $("#startButton").remove();
+
         for (i = 0; i < questions.length; i++) {
             $("#questionsArea").append(`<p>${questions[i].question}</p>`);
-        for (j = 0; j < questions[i].choices.length; j++) {
-            $("#questionsArea").append(`<input type="radio" name="question-"${i} value="${questions[i].choices[j]}>"`)
+
+            for (j = 0; j < questions[i].choices.length; j++) {
+                $("#questionsArea").append(`<input type="radio" name="question-${i}" value="${questions[i].choices[j]}"> 
+                ${questions[i].choices[j]}`)
+            }
+            $("#questionsArea").append(`<p>----------------------------------------------</p>`)
         }
-            
+    },
+    done: function () {
+        var inputs = $("#questionsArea").children("input:checked")
+
+        for (var i = 0; i < inputs.length; i++) {
+
+            if ($(inputs[i]).val() === questions[i].correct) {
+
+                game.correct++
+
+            }
+            else {
+                game.incorrect++
+            }
         }
+        console.log(game.correct);
+    },
+    result: function () {
+
     }
 }
 
