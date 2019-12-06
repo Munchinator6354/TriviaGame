@@ -55,32 +55,66 @@ var questions = [
     // $('#display').html(questions.ques1.question)
 
     {
-        question: 'what is your name',
-        choices: ['tom', 'andy', 'john'],
-        correct: "andy"
+        question: "Question #1 - How many members of the Istari are there?",
+        choices: ['7', '4', '5', '16'],
+        correct: '5'
     },
 
     {
-        question: 'what is your age',
-        choices: ["20", "30", "40"],
-        correct: "30"
+        question: "Which entity is Shelob's Mother?",
+        choices: ["Ainur", "Melkor", "Morgoth", "Ungoliant"],
+        correct: "Ungoliant"
     },
 
     {
-        question: 'what is your favorite food',
-        choices: ['apple', 'pear', 'banana'],
-        correct: "pear"
-    }
+        question: "Which kingdom of men was sunk into the sea by Ilúvatar?",
+        choices: ['Minas Morgul', 'Elémenír', 'Númenor', 'Mins Tirith'],
+        correct: 'Númenor'
+    },
 
+    {
+        question: "Of the 4 hobits to set out for Mordor, there was Frodo, Sam, Pippin, and who?",
+        choices: ['Bilbo', 'Gimli', 'Merry', 'Gandalf'],
+        correct: 'Merry'
+    },
 
+    {
+        question: "What color does Sting turn when Orcs are near?",
+        choices: ['Green', 'Purple', 'Blue, no, Yellow!', 'Blue'],
+        correct: 'Blue'
+    },
 
+    {
+        question: "Which type of entity were Uruk-hai formerly?",
+        choices: ['Men', 'Elves', 'Dwarves', 'Ring Holders'],
+        correct: 'Elves'
+    },
+
+    {
+        question: "What do elves call the hobbits?",
+        choices: ['The Periannath', 'The Mellon', 'The Onodrim', 'The Urulóki'],
+        correct: 'The Periannath'
+    },
+
+    {
+        question: "What is Frodo's special armored tunic made out of?",
+        choices: ['Mothril', 'Mythril', 'Mithril', 'Mathril'],
+        correct: 'Mithril'
+    },
+    
+    {
+        question: "The Undying Lands are in which direction from the world of Men?",
+        choices: ['North', 'East', 'South', 'West'],
+        correct: 'West'
+    },
+    
 
 ]
 
 var game = {
     correct: 0,
     incorrect: 0,
-    counter: 10,
+    counter: 30,
     countdown: function () {
         game.counter--
         $("#timerNumber").html(game.counter)
@@ -105,10 +139,11 @@ var game = {
         }
     },
     done: function () {
-        var inputs = $("#questionsArea").children("input:checked")
-
+        var inputs = $("#questionsArea").children("input:checked");
+        // var noAnswer = $("#questionsArea").children($(this).prop('checked', false));
+        // console.log(noAnswer);
         for (var i = 0; i < inputs.length; i++) {
-
+            // if (!$(inputs[i]).val()
             if ($(inputs[i]).val() === questions[i].correct) {
 
                 game.correct++
@@ -118,10 +153,19 @@ var game = {
                 game.incorrect++
             }
         }
-        console.log(game.correct);
+        game.result();
     },
-    result: function () {
 
+    result: function () {
+        clearInterval(timer);
+        $("#timerArea").empty();
+        $("#questionsArea").empty();
+        var resultsDiv = $("<div>");
+        resultsDiv.attr("id", "results");
+        resultsDiv.html("<p> Game Results </p>");
+        resultsDiv.append("<h4>Correct Answers: " + game.correct + "</h4>");
+        $("#questionsArea").append(resultsDiv);
+        resultsDiv.append(`<h4>Incorrect Answers: ${game.incorrect}</h4>`)
     }
 }
 
@@ -139,13 +183,6 @@ $("#startButton").click(function () {
 //if users choice === the game.correct 0 1 or 2 which ever is right, increment the "correct" property by ++
 //otherwise increment incorrect property ++
 //append correct and incorrect answers to the html
-
-
-
-
-
-
-
 
 
 
