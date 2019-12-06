@@ -61,52 +61,58 @@ var questions = [
     },
 
     {
-        question: "Which entity is Shelob's Mother?",
+        question: "Question #2 - Which entity is Shelob's Mother?",
         choices: ["Ainur", "Melkor", "Morgoth", "Ungoliant"],
         correct: "Ungoliant"
     },
 
     {
-        question: "Which kingdom of men was sunk into the sea by Ilúvatar?",
+        question: "Question #3 - Which kingdom of men was sunk into the sea by Ilúvatar?",
         choices: ['Minas Morgul', 'Elémenír', 'Númenor', 'Mins Tirith'],
         correct: 'Númenor'
     },
 
     {
-        question: "Of the 4 hobits to set out for Mordor, there was Frodo, Sam, Pippin, and who?",
+        question: "Question #4 - Of the 4 hobits to set out for Mordor, there was Frodo, Sam, Pippin, and who?",
         choices: ['Bilbo', 'Gimli', 'Merry', 'Gandalf'],
         correct: 'Merry'
     },
 
     {
-        question: "What color does Sting turn when Orcs are near?",
+        question: "Question #5 - What color does Sting turn when Orcs are near?",
         choices: ['Green', 'Purple', 'Blue, no, Yellow!', 'Blue'],
         correct: 'Blue'
     },
 
     {
-        question: "Which type of entity were Uruk-hai formerly?",
+        question: "Question #6 - Which type of entity were Uruk-hai formerly?",
         choices: ['Men', 'Elves', 'Dwarves', 'Ring Holders'],
         correct: 'Elves'
     },
 
     {
-        question: "What do elves call the hobbits?",
+        question: "Question #7 - What do elves call the hobbits?",
         choices: ['The Periannath', 'The Mellon', 'The Onodrim', 'The Urulóki'],
         correct: 'The Periannath'
     },
 
     {
-        question: "What is Frodo's special armored tunic made out of?",
+        question: "Question #8 - What is Frodo's special armored tunic made out of?",
         choices: ['Mothril', 'Mythril', 'Mithril', 'Mathril'],
         correct: 'Mithril'
     },
     
     {
-        question: "The Undying Lands are in which direction from the world of Men?",
+        question: "Question #9 - The Undying Lands are in which direction from the world of Men?",
         choices: ['North', 'East', 'South', 'West'],
         correct: 'West'
     },
+
+    {
+        question: "Question #10 - What is the most likely food to fill up hungry hobbits?",
+        choices: ['111th birthday cake', 'lembas bread', 'magic beans', "potatoes"],
+        correct: 'lembas bread'
+    }
     
 
 ]
