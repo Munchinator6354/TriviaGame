@@ -1,4 +1,4 @@
-# TriviaGame
+# Middle Earth Trivia Game
 
 ## What is this app for?
 The Middle Earth Trivia Game App is for total nerds that are interested in racing the clock in an attempt to accurately answer questions about their favorite Lord of the Rings facts.
