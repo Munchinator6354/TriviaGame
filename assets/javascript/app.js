@@ -27,7 +27,7 @@ var questions = [
     },
 
     {
-        question: "Question #4 - Of the 4 hobits to set out for Mordor, there was Frodo, Sam, Pippin, and who?",
+        question: "Question #4 - Of the 4 hobbits to set out for Mordor, there was Frodo, Sam, Pippin, and who?",
         choices: ['Bilbo', 'Gimli', 'Merry', 'Gandalf'],
         correct: 'Merry'
     },
